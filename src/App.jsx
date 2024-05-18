@@ -33,16 +33,12 @@ function App() {
 
     try {
       const response = await axios.request(options);
-      console.log(response.data);
       setWeather(response.data);
       setLoading(false);
     } catch (error) {
-      console.error(error);
       setLoading(false);
     }
   }
-
-  const [count, setCount] = useState(0)
 
   const setLocationCallback = (location) => {
     console.log('bla-bla-bla new location: ', location);
